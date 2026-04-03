@@ -1,0 +1,24 @@
+format = """
+[](#8aadf4)\
+[ ](bg:#8aadf4 fg:#24273a)\
+[](fg:#8aadf4 bg:#363a4f)\
+$directory\
+[](fg:#363a4f bg:#c6a0f6)\
+$git_branch$git_status\
+[](fg:#c6a0f6 bg:#24273a)\
+$nodejs\
+$character"""
+
+[directory]
+style = "bg:#363a4f fg:#cad3f5"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "bg:#c6a0f6 fg:#24273a"
+format = "[[ $symbol $branch ]($style)]"
+
+[nodejs]
+symbol = " "
+style = "fg:#a6da95"
+format = "via [$symbol($version)]($style) "

@@ -1,0 +1,53 @@
+# --- VARIABILI ---
+set $mod Mod4
+set $term foot
+set $menu rofi -show drun
+
+# --- COLORI CATPPUCCIN MACCHIATO (Viola) ---
+set $bg      #24273a
+set $mauve   #c6a0f6
+set $surface #363a4f
+set $text    #cad3f5
+
+# --- ESTETICA FINESTRE ---
+gaps inner 12
+gaps outer 5
+smart_gaps on
+default_border pixel 2
+
+client.focused           $mauve $bg $mauve $mauve
+client.focused_inactive  $surface $bg $surface $surface
+client.unfocused         $surface $bg $surface $surface
+
+# --- FIX RELOAD WAYBAR ---
+exec_always killall waybar; waybar
+exec_always swaybg -m fill -i ~/Images/wallpaper.jpg
+
+# --- INPUT (Tastiera IT) ---
+input "type:keyboard" {
+    xkb_layout "it"
+}
+
+# --- SCORCIATOIE ---
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec $menu
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Vuoi uscire?' -b 'Sì' 'swaymsg exit'
+
+# Spostamento Focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Workspace con Numeri
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
