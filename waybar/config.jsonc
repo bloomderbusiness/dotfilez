@@ -5,7 +5,23 @@
     "height": 34,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "custom/power"],
+
+    "modules-right": [
+        "custom/clipboard",
+        "pulseaudio",
+        "network", 
+        "cpu", 
+        "memory", 
+        "custom/power"
+    ],
+
+    "custom/clipboard": {
+        "format": "󰅍", // Icona clipboard (Nerd Font)
+        "interval": "once",
+        "on-click": "cliphist list | rofi -dmenu -p 'Appunti' | cliphist decode | wl-copy",
+        "on-click-right": "cliphist wipe", // Tasto destro per pulire la cronologia
+        "tooltip-format": "Clicca per lo storico appunti"
+    },
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -38,8 +54,12 @@
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-        "on-click": "pavucontrol"
+        "format-muted": "󰝟  Muted", // Icona con sbarra (Nerd Font)
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol"
     },
 
     "custom/power": {

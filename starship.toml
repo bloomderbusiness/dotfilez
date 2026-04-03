@@ -4,9 +4,10 @@ format = """
 [](fg:#8aadf4 bg:#363a4f)\
 $directory\
 [](fg:#363a4f bg:#c6a0f6)\
-$git_branch$git_status\
-[](fg:#c6a0f6 bg:#24273a)\
+$git_branch\
+[](fg:#c6a0f6 bg:#363a4f)\
 $nodejs\
+[](fg:#363a4f) \
 $character"""
 
 [directory]
@@ -14,11 +15,16 @@ style = "bg:#363a4f fg:#cad3f5"
 format = "[ $path ]($style)"
 
 [git_branch]
-symbol = ""
+symbol = " "
 style = "bg:#c6a0f6 fg:#24273a"
-format = "[[ $symbol $branch ]($style)]"
+# Qui il formato è pulito, i separatori sono gestiti nella stringa 'format' sopra
+format = "[$symbol$branch]($style)"
 
 [nodejs]
 symbol = " "
-style = "fg:#a6da95"
-format = "via [$symbol($version)]($style) "
+style = "bg:#363a4f fg:#a6da95"
+format = "[ $symbol($version) ]($style)"
+
+[character]
+success_symbol = "[[❯](bold #8aadf4)](bold #8aadf4)"
+error_symbol = "[[❯](bold #ed8796)](bold #ed8796)"

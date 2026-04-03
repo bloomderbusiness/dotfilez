@@ -42,3 +42,17 @@ window#waybar {
     border-radius: 8px;
     font-weight: bold;
 }
+
+#custom-clipboard {
+    background: #363a4f;
+    color: #c6a0f6;
+    padding: 0 15px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#custom-clipboard:hover {
+    background: #363a4f;
+    color: #c6a0f6;
+}
