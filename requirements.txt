@@ -1,0 +1,1 @@
+sudo pacman -Syyu && sudo pacman -S sway foot rofi waybar starship fish swaybg swaynag wl-clipboard cliphist wireplumber pavucontrol networkmanager ttf-jetbrains-mono-nerd-font fnm
