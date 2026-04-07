@@ -20,7 +20,7 @@ client.focused_inactive  $surface $bg $surface $surface
 client.unfocused         $surface $bg $surface $surface
 
 # --- FIX RELOAD WAYBAR ---
-exec_always killall waybar; waybar
+exec_always "pkill waybar; sleep 0.5 && waybar"
 exec_always swaybg -m fill -i ~/Images/wallpaper.jpg
 
 # --- INPUT (Tastiera IT) ---
@@ -40,6 +40,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+f fullscreen toggle
 
 # Workspace con Numeri
 bindsym $mod+1 workspace number 1
