@@ -56,3 +56,26 @@ window#waybar {
     background: #363a4f;
     color: #c6a0f6;
 }
+
+/* Aggiungi questo insieme agli altri moduli come #clock, #pulseaudio, ecc. */
+#battery {
+    background: #363a4f; /* Colore surface */
+    color: #c6a0f6;      /* Colore Mauve */
+    padding: 0 15px;
+    margin: 4px 3px;
+    border-radius: 8px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #a6da95; /* Verde per quando è in carica */
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ed8796; /* Rosso per batteria critica */
+    color: #24273a;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
