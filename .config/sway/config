@@ -3,9 +3,9 @@ set $mod Mod4
 set $term foot
 set $menu rofi -show drun
 
-# --- COLORI CATPPUCCIN MACCHIATO (Viola) ---
+# --- COLORI ---
 set $bg      #24273a
-set $mauve   #c6a0f6
+set $mauve   #ffffff
 set $surface #363a4f
 set $text    #cad3f5
 
