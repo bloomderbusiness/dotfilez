@@ -12,8 +12,9 @@ set $text    #cad3f5
 # --- ESTETICA FINESTRE ---
 gaps inner 12
 gaps outer 5
-smart_gaps on
+smart_gaps off
 default_border pixel 2
+default_floating_border pixel 2
 
 client.focused           $mauve $bg $mauve $mauve
 client.focused_inactive  $surface $bg $surface $surface
@@ -55,11 +56,35 @@ bindsym $mod+Shift+3 move container to workspace number 3
 bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 
+# --- GESTIONE LAYOUT E MOVIMENTO ---
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
+# Spostamento finestre
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Modalità Floating
+bindsym $mod+Shift+space floating toggle
+
 # Prova con i nomi multimediali standard
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+# --- GESTIONE LAYOUT E MOVIMENTO ---
+bindsym $mod+h splith
+bindsym $mod+v splitv
 
+# Spostamento finestre
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Modalità Floating
+bindsym $mod+Shift+space floating toggle
 # Avvia il demone della clipboard e notifiche
 exec_always mako
 exec wl-paste --type text --watch cliphist store &
