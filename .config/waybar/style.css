@@ -5,13 +5,18 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.9);
+    background: rgba(20, 20, 31, 0.9);
     border-radius: 12px;
     color: #cad3f5;
 }
 
 #workspaces button {
     color: #ffffff;
+    padding: 0 12px;
+}
+
+#workspaces button:hover {
+    color: #000;
     padding: 0 12px;
 }
 
