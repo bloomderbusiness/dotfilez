@@ -15,6 +15,12 @@ sudo pacman -Syyu --noconfirm && sudo pacman -S --noconfirm sway foot rofi wayba
 echo "Enable Firewall.."
 sudo ufw enable
 
+# Config git
+echo "Config git.."
+git config --global user.name "bloomderbusiness"
+git config --global user.email "bloomderbusiness@gmail.com"
+
+
 # Install AUR Helper (PARU)
 echo "Install AUR Helper (PARU).."
 sudo pacman -S --needed base-devel
