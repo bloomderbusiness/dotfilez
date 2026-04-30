@@ -10,8 +10,8 @@ set $surface #363a4f
 set $text    #cad3f5
 
 # --- ESTETICA FINESTRE ---
-gaps inner 12
-gaps outer 5
+# gaps inner 12
+# gaps outer 5
 smart_gaps off
 default_border pixel 2
 default_floating_border pixel 2
