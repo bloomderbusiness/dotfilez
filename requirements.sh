@@ -15,6 +15,14 @@ sudo pacman -Syyu --noconfirm && sudo pacman -S --noconfirm sway foot rofi wayba
 echo "Enable Firewall.."
 sudo ufw enable
 
+# Change default shell to Fish
+echo "Change default shell to Fish.."
+chsh -s /usr/bin/fish
+
+# Install Node Version Manager (fnm)
+echo "Install Node Version Manager (fnm).."
+fnm install --lts
+
 # Config git
 echo "Config git.."
 git config --global user.name "ottavianowebenterprises"
