@@ -17,8 +17,8 @@ sudo ufw enable
 
 # Config git
 echo "Config git.."
-git config --global user.name "bloomderbusiness"
-git config --global user.email "bloomderbusiness@gmail.com"
+git config --global user.name "ottavianowebenterprises"
+git config --global user.email "ottavianowebenterprises@gmail.com"
 
 
 # Install AUR Helper (PARU)
